@@ -64,7 +64,7 @@ var parseJSON = function (path, src) {
         map = fixSassStrings(map);
         map += ';';
 
-        return map;
+        return map.replace(/"/g, "");
     },
 
     fixColors = function (value) {
